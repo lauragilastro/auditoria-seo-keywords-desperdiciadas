@@ -1,14 +1,5 @@
 import pandas as pd
 
-# EL DRAMA DE LOS CLICKS PERDIDOS
-# Esto es un auditor de rendimiento de intención de búsqueda.
-# El objetivo de esta herramienta es detectar tráfico perdido.
-# ES decir... aprovechar PCs que están atrapadas en el cuello de botella del top 20, que google las -->
-# --> muestra mucho (tienen potencial) pero con CTR bajo (pasan desapercibidas).
-# Vamos que son potencial desperdiciado y esto sirve para detectarlas y aprovecharlas para -->
-# --> el contenido ORGÁNICO.
-# A esto se le conoce técnicamente como Striking Distance (Distancia de ataque en inglés)
-
 # BLOQUE 1: CARGA DE DATOS: python abre el excel y lo examina
 ruta_excel = 'gsc-lauragilastro.xlsx'
 excel_completo = pd.read_excel(ruta_excel, sheet_name=None)
@@ -46,7 +37,7 @@ drama = oportunidades[
 # BLOQUE 3: CLASIFICACIÓN Y CÁLCULO DE PÉRDIDAS DE CLICKS
 drama['Pérdida de clics aprox'] = (drama['Impresiones'] * 0.05).astype(int) - drama['Clics']
 drama = drama.sort_values(by='Pérdida de clics aprox', ascending=False)
-drama = drama.head(5) # Solo muestra 5 palabras (versión gratuita)
+drama = drama.head(5) # Solo muestra 5 palabras, pero podría mostrar 20, 50 o las que queramos, solo tenemos que cambiar ese número.
 
 # Lo que printeamos:
 if drama.empty:
