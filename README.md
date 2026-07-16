@@ -1,5 +1,5 @@
 # Detectar keywords desperdiciadas pero con potencial en una auditoría SEO.
-19/03/2026
+24/03/2026
 EL DRAMA DE LOS CLICKS PERDIDOS EN UN NEGOCIO.
 Esto es un auditor de rendimiento de intención de búsqueda.
 El objetivo de esta herramienta es detectar tráfico perdido.
